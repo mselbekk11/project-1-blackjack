@@ -25,25 +25,27 @@ This is going to be the casinos favourite game: blackjack. It is a first player 
 
 ## MVP Checklist
 
+- Render the starting area
 - Hit button
-- Stand buton
+- Stand button
 - Deal button
 - A counter showing what your cards amount to
-- Keep count of wins / losses / draws
-- Message saying who won
+- A counter showing number of wins / losses / draws
+- Render a message saying who won
 - How to play icon with information
 - Save results into local storage
-- animation on the cards
+- animation on the cards when being dealt 
 
 
 
 ## Stretch Goals
 
-- player coins
-- betting - increase / decrease bets
-- chips move once you win or loose
+- Providing the player with coins to bet
+- Keeping account of the balance when player wins and loses
+- button for increasing and decreasing the bet amount
+- chips move once the player wins or looses
 - input your name and choose an avatar before your start
-- button that can change the venue you are in
+- button that can change the look of the venue you are in
 
 ## Roadblocks
 
