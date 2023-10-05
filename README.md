@@ -1,12 +1,12 @@
 # Blackjack
 
----
+
 
 ## About the Game
 
 This is going to be a casinos favourite game: blackjack. It is a first player game where you will need to beat the dealer in a game of blackjack. The game will provide the ability to deal (receive cards) hit (get a new card) & stand (stick with your cards) . The amount of wins, loses & draws will be tracked
 
----
+
 
 ## Tech stack being used
 
@@ -15,13 +15,13 @@ This is going to be a casinos favourite game: blackjack. It is a first player ga
 - Vanilla JavaScript
 - CSS Card Library
 
----
+
 
 ## Wireframe
 
 ![Blackjack](https://res.cloudinary.com/dtjasyr7k/image/upload/v1696548268/Group_5_vvbyfx.png)
 
----
+
 
 ## MVP Checklist
 
@@ -35,7 +35,7 @@ This is going to be a casinos favourite game: blackjack. It is a first player ga
 - Save results into local storage
 - animation on the cards
 
----
+
 
 ## Stretch Goals
 
