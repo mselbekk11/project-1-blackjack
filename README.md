@@ -25,11 +25,11 @@ This is going to be the casinos favourite game: blackjack. It is a first player 
 - A counter showing number of wins / losses / draws
 - Render a message saying who won
 - How to play icon with information
-- Save results into local storage
 - animation on the cards when being dealt
 
 ## Stretch Goals
 
+- Save results into local storage
 - Providing the player with coins to bet
 - Keeping account of the balance when player wins and loses
 - button for increasing and decreasing the bet amount
