@@ -26,9 +26,9 @@ This is going to be the casinos favourite game: blackjack. It is a first player 
 ## MVP Checklist
 
 - Render the starting area
-- Hit button
-- Stand button
-- Deal button
+- Render Hit button
+- Render Stand button
+- Render Deal button
 - A counter showing what your cards amount to
 - A counter showing number of wins / losses / draws
 - Render a message saying who won
