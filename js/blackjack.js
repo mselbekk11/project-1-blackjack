@@ -9,6 +9,36 @@ let deck
 
 let canHit = true //allows the player (you) to draw while yourSum <= 21
 
+// Add an event listener to the restart button
+document.getElementById('restart').addEventListener('click', restartGame)
+
+function restartGame() {
+  // Reset all game-related variables
+  dealerSum = 0
+  yourSum = 0
+  dealerAceCount = 0
+  yourAceCount = 0
+  canHit = true
+
+  // Clear the dealer and your card displays
+  // Clear the totals in the card count
+  document.getElementById('dealer-cards').innerHTML = ''
+  document.getElementById('your-cards').innerHTML = ''
+  document.getElementById('your-sum').innerHTML = ''
+  document.getElementById('dealer-sum').innerHTML = ''
+
+  // Clear the hidden card and result messages
+  // document.getElementById('hidden').src = ''
+  document.getElementById('results').innerText = ''
+  document.getElementById(
+    'dealer-cards'
+  ).innerHTML = `<img id="hidden" src="./cards/BACK.png" alt="BACK" />`
+
+  buildDeck()
+  shuffleDeck()
+  startGame()
+}
+
 window.onload = function () {
   buildDeck()
   shuffleDeck()
@@ -131,12 +161,12 @@ function stay() {
   document.getElementById('dealer-sum').innerText = dealerSum
   document.getElementById('your-sum').innerText = yourSum
   document.getElementById('results').innerText = message
-  document.getElementById('buttons').innerHTML = ''
-  document.getElementById(
-    'buttons'
-  ).innerHTML = `<button id="deal" type="button" onClick="window.location.reload()">
-  Deal
-</button>`
+  //   document.getElementById('buttons').innerHTML = ''
+  //   document.getElementById(
+  //     'buttons'
+  //   ).innerHTML = `<button id="deal" type="button" onClick="window.location.reload()">
+  //   Deal
+  // </button>`
 }
 
 function getValue(card) {
