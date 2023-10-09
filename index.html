@@ -3,21 +3,33 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Black Jack</title>
     <link
       href="css/card-library/css/cardstarter.css"
       rel="stylesheet"
       type="text/css"
     />
-    <link rel="stylesheet" href="/css/style.css" />
-    <script defer src="/js/main.js"></script>
-    <script defer src="/js/card.js"></script>
+    <link rel="stylesheet" href="/css/blackjack.css" />
+    <script defer src="/js/blackjack.js"></script>
+    <!-- <script defer src="/js/card.js"></script> -->
   </head>
   <body>
-    <h3>Original Deck</h3>
+    <!-- <h3>Original Deck</h3>
     <section id="original-deck-container" class="card-container"></section>
     <button>RE-SHUFFLE DECK</button>
     <h3>Shuffled Deck</h3>
-    <section id="shuffled-deck-container" class="card-container"></section>
+    <section id="shuffled-deck-container" class="card-container"></section> -->
+    <h2>Dealer <span id="dealer-sum"></span></h2>
+    <div id="dealer-cards">
+      <img id="hidden" src="./cards/BACK.png" alt="BACK">
+    </div>
+
+    <h2>You: <span id="your-sum"></span></h2>
+    <div id="your-cards"></div>
+
+    <br />
+    <button id="hit">hit</button>
+    <button id="stay">Stay</button>
+    <p id="results"></p>
   </body>
 </html>
