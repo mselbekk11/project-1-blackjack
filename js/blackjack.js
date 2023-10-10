@@ -201,3 +201,11 @@ function reduceAce(playerSum, playerAceCount) {
   }
   return playerSum
 }
+
+function openNav() {
+  document.getElementById('mySidenav').style.width = '600px'
+}
+
+function closeNav() {
+  document.getElementById('mySidenav').style.width = '0'
+}

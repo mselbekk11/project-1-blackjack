@@ -119,3 +119,42 @@ background-color: #fff;
   margin: 30px 30px;
   font-size: 1.3em;
 }
+.tray {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: #2F7C21;
+  overflow-x: hidden;
+  transition: 0.3s;
+  padding-top: 60px;
+}
+
+.container-tray {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+button .close {
+
+}
+
+.tray h2 {
+
+}
+
+.youtube {
+
+}

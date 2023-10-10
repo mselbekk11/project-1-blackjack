@@ -16,7 +16,13 @@
   <body>
     <div class="top-bar">
       <img class="logo" src="/img/game.png" alt="rules-of-the-game" />
-      <img class="rules" src="/img/how-to-play.svg" alt="rules-of-the-game" />
+      <img
+        class="rules"
+        src="/img/how-to-play.svg"
+        alt="rules-of-the-game"
+        onclick="openNav()"
+      />
+      <!-- <span style="font-size: 30px; cursor: pointer" onclick="openNav()" >&#9776; open</span> -->
     </div>
     <div class="middle">
       <h2>Dealer <span id="dealer-sum"></span></h2>
@@ -41,6 +47,33 @@
       <p>Wins: <span>10</span></p>
       <p>Loses: <span>5</span></p>
       <p>Draws: <span>2</span></p>
+    </div>
+    <div class="tray" id="mySidenav">
+      <button
+        class="close"
+        href="javascript:void(0)"
+        class="closebtn"
+        onclick="closeNav()"
+      >
+        X
+      </button>
+      <div class="container-tray">
+        <h2>How to Play</h2>
+        <div class="youtube">
+          <iframe
+            width="100%"
+            height="100%"
+            src="https://www.youtube.com/embed/eyoh-Ku9TCI?si=4u9XVWzalXE248np"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+      <!-- <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+        >&times;</a
+      > -->
     </div>
   </body>
 </html>
