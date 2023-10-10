@@ -14,26 +14,33 @@
     <!-- <script defer src="/js/card.js"></script> -->
   </head>
   <body>
-    <!-- <h3>Original Deck</h3>
-    <section id="original-deck-container" class="card-container"></section>
-    <button>RE-SHUFFLE DECK</button>
-    <h3>Shuffled Deck</h3>
-    <section id="shuffled-deck-container" class="card-container"></section> -->
-    <h2>Dealer <span id="dealer-sum"></span></h2>
-    <div id="dealer-cards">
-      <img id="hidden" src="./cards/BACK.png" alt="BACK" />
+    <div class="top-bar">
+      <img class="logo" src="/img/game.png" alt="rules-of-the-game" />
+      <img class="rules" src="/img/how-to-play.svg" alt="rules-of-the-game" />
     </div>
+    <div class="middle">
+      <h2>Dealer <span id="dealer-sum"></span></h2>
+      <div id="dealer-cards">
+        <!-- <img id="hidden" src="./cards/BACK.png" alt="BACK" /> -->
+        <img id="hidden" src="./cards/svg/BACK.svg" alt="BACK" />
+      </div>
 
-    <h2>You: <span id="your-sum"></span></h2>
-    <div id="your-cards"></div>
+      <h2>You: <span id="your-sum"></span></h2>
+      <div id="your-cards"></div>
 
-    <br />
+      <br />
 
-    <div id="buttons">
-      <button id="hit" class="">hit</button>
-      <button id="stay" class="">Stay</button>
+      <div id="buttons">
+        <button id="hit" class="">Hit</button>
+        <button id="stay" class="">Stay</button>
+        <button id="restart">Deal</button>
+      </div>
+      <h3 id="results"></h3>
     </div>
-    <p id="results"></p>
-    <button id="restart">Restart Game</button>
+    <div class="footer">
+      <p>Wins: <span>10</span></p>
+      <p>Loses: <span>5</span></p>
+      <p>Draws: <span>2</span></p>
+    </div>
   </body>
 </html>
