@@ -8,7 +8,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
   background-color: #8AB687;
-  border: 20px solid #2F7C21;
+  /* border: 20px solid #2F7C21; */
   margin: 0;
   height: 100vh;
   font-family: 'Lobster', sans-serif;
@@ -37,12 +37,8 @@ h3 {
   width: 100%;
 }
 
-.top-bar img.rules {
-  width: 2em;
-}
-
 .top-bar img.logo {
-  width: 5em;
+  width: 6em;
 }
 
 .middle {
@@ -106,12 +102,25 @@ background-color: #fff;
 }
 
 .footer {
-  background-color: #000;
-  display: flex;
-  justify-content: center;
   width: 100%;
   position: absolute;
   bottom: 0px;
+}
+
+#rules {
+  display: flex;
+  justify-content: end;
+  padding: 0px 20px 20px 0px;
+}
+
+#rules img.rules {
+  width: 2em;
+}
+
+.box {
+  background-color: #000;
+  display: flex;
+  justify-content: center;
 }
 
 .footer p {
@@ -126,35 +135,40 @@ background-color: #fff;
   z-index: 1;
   top: 0;
   right: 0;
-  background-color: #2F7C21;
+  background-color: #000;
   overflow-x: hidden;
   transition: 0.3s;
-  padding-top: 60px;
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .container-tray {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: flex-end;
 }
 
-.sidenav .closebtn {
+
+.tray .closebtn {
+  /* display: flex;
+  justify-content: start;
+  flex-direction: column;
+  align-items: center; */
   position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
-}
-
-button .close {
-
+  top: 10px;
+  right: 10px;
+ width: 2em;
 }
 
 .tray h2 {
-
+margin-bottom: 40px;
 }
 
 .youtube {
-
+  width: 450px;
+  height: 250px;
 }

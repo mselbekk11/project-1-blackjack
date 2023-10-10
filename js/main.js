@@ -9,6 +9,9 @@ let deck
 
 let canHit = true //allows the player (you) to draw while yourSum <= 21
 
+// Add an event listener to the restart button
+document.getElementById('restart').addEventListener('click', restartGame)
+
 function restartGame() {
   // Reset all game-related variables
   dealerSum = 0
@@ -29,7 +32,7 @@ function restartGame() {
   document.getElementById('results').innerText = ''
   document.getElementById(
     'dealer-cards'
-  ).innerHTML = `<img id="hidden" src="./cards/BACK.png" alt="BACK" />`
+  ).innerHTML = `<img id="hidden" src="./cards/svg/BACK.svg" alt="BACK" />`
 
   buildDeck()
   shuffleDeck()
@@ -89,23 +92,25 @@ function startGame() {
     // <img src="./cards/4-C.png">
     let cardImg = document.createElement('img')
     let card = deck.pop()
-    cardImg.src = './cards/' + card + '.png'
+    cardImg.src = './cards/svg/' + card + '.svg'
     dealerSum += getValue(card)
     dealerAceCount += checkAce(card)
+    console.log(card)
     document.getElementById('dealer-cards').append(cardImg)
   }
-  console.log(dealerSum)
+
+  // console.log(dealerSum)
 
   for (let i = 0; i < 2; i++) {
     let cardImg = document.createElement('img')
     let card = deck.pop()
-    cardImg.src = './cards/' + card + '.png'
+    cardImg.src = './cards/svg/' + card + '.svg'
     yourSum += getValue(card)
     yourAceCount += checkAce(card)
     document.getElementById('your-cards').append(cardImg)
   }
 
-  console.log(yourSum)
+  // console.log(yourSum)
   // document.getElementById('deal').addEventListener('click', deal)
   document.getElementById('hit').addEventListener('click', hit)
   document.getElementById('stay').addEventListener('click', stay)
@@ -118,7 +123,7 @@ function hit() {
 
   let cardImg = document.createElement('img')
   let card = deck.pop()
-  cardImg.src = './cards/' + card + '.png'
+  cardImg.src = './cards/svg/' + card + '.svg'
   yourSum += getValue(card)
   yourAceCount += checkAce(card)
   document.getElementById('your-cards').append(cardImg)
@@ -133,7 +138,7 @@ function stay() {
   yourSum = reduceAce(yourSum, yourAceCount)
 
   canHit = false
-  document.getElementById('hidden').src = './cards/' + hidden + '.png'
+  document.getElementById('hidden').src = './cards/svg/' + hidden + '.svg'
 
   let message = ''
   if (yourSum > 21) {
@@ -158,9 +163,6 @@ function stay() {
   document.getElementById('dealer-sum').innerText = dealerSum
   document.getElementById('your-sum').innerText = yourSum
   document.getElementById('results').innerText = message
-
-  // Add an event listener to the restart button
-  document.getElementById('restart').addEventListener('click', restartGame)
   //   document.getElementById('buttons').innerHTML = ''
   //   document.getElementById(
   //     'buttons'
@@ -198,4 +200,12 @@ function reduceAce(playerSum, playerAceCount) {
     playerAceCount -= 1
   }
   return playerSum
+}
+
+function openNav() {
+  document.getElementById('mySidenav').style.width = '600px'
+}
+
+function closeNav() {
+  document.getElementById('mySidenav').style.width = '0'
 }

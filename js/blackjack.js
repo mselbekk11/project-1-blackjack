@@ -9,6 +9,7 @@ let deck
 
 let canHit = true //allows the player (you) to draw while yourSum <= 21
 
+
 // Add an event listener to the restart button
 document.getElementById('restart').addEventListener('click', restartGame)
 
