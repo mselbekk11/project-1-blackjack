@@ -9,6 +9,10 @@ let deck
 
 let canHit = true //allows the player (you) to draw while yourSum <= 21
 
+let wins = 0
+let losses = 0
+let draws = 0
+
 // Add an event listener to the restart button
 document.getElementById('restart').addEventListener('click', restartGame)
 
@@ -37,6 +41,11 @@ function restartGame() {
   buildDeck()
   shuffleDeck()
   startGame()
+
+  // Reset the score display
+  document.getElementById('wins').innerText = wins
+  document.getElementById('losses').innerText = losses
+  document.getElementById('draws').innerText = draws
 }
 
 window.onload = function () {
@@ -134,6 +143,8 @@ function hit() {
 }
 
 function stay() {
+  document.getElementById('stay').removeEventListener('click', stay)
+
   dealerSum = reduceAce(dealerSum, dealerAceCount)
   yourSum = reduceAce(yourSum, yourAceCount)
 
@@ -142,23 +153,27 @@ function stay() {
 
   let message = ''
   if (yourSum > 21) {
+    losses++
     message = 'You Lose!'
   } else if (dealerSum > 21) {
+    wins++
     message = 'You Win!'
-  }
-  // both you and dealer <= 21
-  else if (yourSum == dealerSum) {
+  } else if (yourSum == dealerSum) {
+    // both you and dealer <= 21
+    draws++
     message = 'Its a Tie!'
   } else if (yourSum > dealerSum) {
+    wins++
     message = 'You Win!'
   } else if (yourSum < dealerSum) {
+    losses++
     message = 'You Lose!'
   }
 
-  // const btn = document.createElement('button')
-  // document.getElementById('buttons').append(btn)
-  // btn.innerText = 'Deal'
-  // btn.classList.add('deal')
+  // Update the score display
+  document.getElementById('wins').innerText = wins
+  document.getElementById('losses').innerText = losses
+  document.getElementById('draws').innerText = draws
 
   document.getElementById('dealer-sum').innerText = dealerSum
   document.getElementById('your-sum').innerText = yourSum

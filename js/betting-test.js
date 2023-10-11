@@ -13,6 +13,55 @@ let wins = 0
 let losses = 0
 let draws = 0
 
+let balance = 100 // Initial balance
+
+// Add event listeners to the betting buttons
+document.getElementById('betbtn1').addEventListener('click', () => placeBet(1))
+document.getElementById('betbtn2').addEventListener('click', () => placeBet(5))
+document.getElementById('betbtn3').addEventListener('click', () => placeBet(10))
+document.getElementById('betbtn4').addEventListener('click', () => placeBet(20))
+
+function placeBet(amount) {
+  if (amount <= balance) {
+    // Deduct the bet amount from the balance
+    balance -= amount
+
+    // Update the balance display
+    document.getElementById('balance').textContent = `Balance: ${balance}`
+
+    // Update the current bet display
+    const currentBet =
+      parseInt(document.getElementById('current-bet').textContent) + amount
+    document.getElementById('current-bet').textContent = currentBet
+
+    // Start the game or continue the game logic here
+    // You can call your startGame() function or any other logic to handle the game.
+    // Ensure that you account for the player's balance while playing.
+  } else {
+    alert('Insufficient balance for this bet.')
+  }
+}
+
+function handleGameResult(result) {
+  switch (result) {
+    case 'win':
+      balance += parseInt(document.getElementById('current-bet').textContent)
+      break
+    case 'lose':
+      // No need to add anything here because the bet was already deducted.
+      break
+    case 'draw':
+      balance += parseInt(document.getElementById('current-bet').textContent)
+      break
+  }
+
+  // Update the balance display
+  document.getElementById('balance').textContent = `Balance: ${balance}`
+
+  // Reset the current bet display
+  document.getElementById('current-bet').textContent = '0'
+}
+
 // Add an event listener to the restart button
 document.getElementById('restart').addEventListener('click', restartGame)
 
@@ -37,6 +86,13 @@ function restartGame() {
   document.getElementById(
     'dealer-cards'
   ).innerHTML = `<img id="hidden" src="./cards/svg/BACK.svg" alt="BACK" />`
+
+  // Reset the current bet display
+  document.getElementById('current-bet').textContent = '0'
+
+  // Reset the balance to its initial value
+  balance = balance
+  document.getElementById('balance').textContent = `Balance: ${balance}`
 
   buildDeck()
   shuffleDeck()
@@ -153,19 +209,24 @@ function stay() {
 
   let message = ''
   if (yourSum > 21) {
+    balance -= parseInt(document.getElementById('current-bet').textContent)
     losses++
     message = 'You Lose!'
   } else if (dealerSum > 21) {
+    balance += parseInt(document.getElementById('current-bet').textContent)
     wins++
     message = 'You Win!'
   } else if (yourSum == dealerSum) {
     // both you and dealer <= 21
+    balance += parseInt(document.getElementById('current-bet').textContent)
     draws++
     message = 'Its a Tie!'
   } else if (yourSum > dealerSum) {
+    balance += parseInt(document.getElementById('current-bet').textContent)
     wins++
     message = 'You Win!'
   } else if (yourSum < dealerSum) {
+    balance -= parseInt(document.getElementById('current-bet').textContent)
     losses++
     message = 'You Lose!'
   }

@@ -15,41 +15,57 @@
   </head>
   <body>
     <div class="top-bar">
+      <h3 id="results"></h3>
+    </div>
+    <div class="logo">
       <img class="logo" src="/img/game.png" alt="rules-of-the-game" />
-      <!-- <img
-        class="rules"
-        src="/img/how-to-play.svg"
-        alt="rules-of-the-game"
-        onclick="openNav()"
-      /> -->
-      <!-- <span style="font-size: 30px; cursor: pointer" onclick="openNav()" >&#9776; open</span> -->
     </div>
     <div class="middle">
-      <h2>Dealer <span id="dealer-sum"></span></h2>
-      <div id="dealer-cards">
-        <!-- <img id="hidden" src="./cards/BACK.png" alt="BACK" /> -->
-        <img id="hidden" src="./cards/svg/BACK.svg" alt="BACK" />
+      <div class="top-border">
+        <h2>Dealer <span id="dealer-sum"></span></h2>
+        <div id="dealer-cards">
+          <img id="hidden" src="./cards/svg/BACK.svg" alt="BACK" />
+        </div>
       </div>
-
-      <h2>You: <span id="your-sum"></span></h2>
-      <div id="your-cards"></div>
-
-      <br />
-
+      <div class="bottom-border">
+        <h2>You <span id="your-sum"></span></h2>
+        <div id="your-cards"></div>
+      </div>
       <div id="buttons">
         <button id="hit" class="">Hit</button>
         <button id="stay" class="">Stay</button>
         <button id="restart">Deal</button>
       </div>
+    </div>
 
-      <!-- <div id="bet-container">
+    <!-- <div id="bet-container">
         <label for="bet">Place Your Bet:</label>
         <input type="number" id="bet" min="1" step="1" />
         <button id="place-bet">Place Bet</button>
       </div> -->
 
-      <h3 id="results"></h3>
+    <!-- <div class="buttons">
+      <button id="betbtn1" onclick="betButton1()">$1 BET</button>
+      <button id="betbtn2" onclick="betButton2()">$5 BET</button>
+      <button id="betbtn3" onclick="betButton3()">$10 BET</button>
+      <button id="betbtn4" onclick="betButton4()">$20 BET</button>
     </div>
+    <div class="player-stats">
+      <p><span id="balance">Balance: 100</span> | Bet: <span id="current-bet">0</span></p>
+    </div>
+    <div id="message-el">
+      Want to play a round?
+    </div> -->
+
+    <!-- <div class="betting">
+      <label for="betAmount">Bet Amount:</label>
+      <input type="number" id="betAmount" min="1" step="1" value="1" />
+      <button id="increaseBet">+</button>
+      <button id="decreaseBet">-</button>
+      <button id="placeBet">Place Bet</button>
+      <p>Balance: <span id="balance">100</span></p>
+    </div> -->
+
     <div class="footer">
       <div id="rules">
         <img
@@ -74,14 +90,7 @@
         class="closebtn"
         onclick="closeNav()"
       />
-      <!-- <button
-        class="closebtn"
-        href="javascript:void(0)"
-        class="closebtn"
-        onclick="closeNav()"
-      >
-        X
-      </button> -->
+
       <div class="container-tray">
         <h2>How to Play</h2>
         <div class="youtube">
@@ -96,18 +105,6 @@
           ></iframe>
         </div>
       </div>
-      <!-- <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
-        >&times;</a
-      > -->
     </div>
   </body>
 </html>
-
-
-<!-- 
-  got all the logic to working
-  managed to get the wins and loses counter working 
-  majority of my MVP is finihed just need to add some animation to the cards appearing 
-
-  today - add betting / so an amount you want to bet input / balance etc...
--->
