@@ -43,6 +43,11 @@ function restartGame() {
   startGame()
 
   // Reset the score display
+
+  wins = parseInt(localStorage.getItem('wins')) || 0
+  losses = parseInt(localStorage.getItem('losses')) || 0
+  draws = parseInt(localStorage.getItem('draws')) || 0
+
   document.getElementById('wins').innerText = wins
   document.getElementById('losses').innerText = losses
   document.getElementById('draws').innerText = draws
@@ -52,6 +57,15 @@ window.onload = function () {
   buildDeck()
   shuffleDeck()
   startGame()
+
+  // Load the values from local storage
+  wins = parseInt(localStorage.getItem('wins')) || 0
+  losses = parseInt(localStorage.getItem('losses')) || 0
+  draws = parseInt(localStorage.getItem('draws')) || 0
+
+  document.getElementById('wins').innerText = wins
+  document.getElementById('losses').innerText = losses
+  document.getElementById('draws').innerText = draws
 }
 
 function buildDeck() {
@@ -184,6 +198,11 @@ function stay() {
   //   ).innerHTML = `<button id="deal" type="button" onClick="window.location.reload()">
   //   Deal
   // </button>`
+
+  // Save the values in local storage
+  localStorage.setItem('wins', wins)
+  localStorage.setItem('losses', losses)
+  localStorage.setItem('draws', draws)
 }
 
 function getValue(card) {
