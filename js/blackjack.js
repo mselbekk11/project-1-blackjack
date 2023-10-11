@@ -13,6 +13,43 @@ let wins = 0
 let losses = 0
 let draws = 0
 
+// document.getElementById('enter').addEventListener('click', enter)
+
+// const playerName = document.getElementById('fname').value
+
+// console.log(playerName)
+
+// function enter(e) {
+//   const splash = document.getElementById('splash')
+//   splash.classList.add('display-none')
+//   console.log(splash)
+// }
+
+// document.addEventListener('DOMContentLoaded', function () {
+//   // Get references to the input field and the enter button
+//   var nameInput = document.getElementById('name-input')
+//   var enterButton = document.getElementById('enter-button')
+
+//   // Define a variable to store the name
+//   var storedName
+
+//   // Add an event listener to the enter button
+//   enterButton.addEventListener('click', function () {
+//     // Get the value entered in the input field
+//     var enteredName = nameInput.value
+
+//     // Check if a name has been entered
+//     if (enteredName) {
+//       const splash = document.getElementById('splash')
+//       splash.classList.add('display-none')
+//       const playerName = document.getElementById('player-name')
+//       playerName.innerText = enteredName + ' ' + dealerSum
+//     } else {
+//       alert('Please enter a name before clicking Enter.')
+//     }
+//   })
+// })
+
 // Add an event listener to the restart button
 document.getElementById('restart').addEventListener('click', restartGame)
 
