@@ -30,7 +30,7 @@ body {
   top: 0;
   width: 100%;
   height: 100vh;
-  background-color: #000;
+  background-color: #91B48B;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -38,7 +38,49 @@ body {
 }
 
 #splash img {
-  width: 8em;
+  width: 12em;
+  margin-bottom: 2cqmax;
+  animation: fadeIn 2s;
+  -webkit-animation: fadeIn 2s;
+  -moz-animation: fadeIn 2s;
+  -o-animation: fadeIn 2s;
+  -ms-animation: fadeIn 2s;
+}
+
+#name-input {
+width: 300px;
+margin-bottom: 30px;
+padding: 15px;
+border: none;
+border-radius: 5px;
+outline: none;
+background-color: #BDD2B9;
+animation: fadeIn 2s;
+-webkit-animation: fadeIn 2s;
+-moz-animation: fadeIn 2s;
+-o-animation: fadeIn 2s;
+-ms-animation: fadeIn 2s;
+}
+
+input::placeholder{
+  color: rgb(72, 72, 72);
+}
+
+#enter-button {
+padding: 15px 20px;
+font-size: 0.8em;
+font-weight: bold;
+background-color: black;
+border: none;
+border-radius: 5px;
+/* margin: 0px 20px 0px 0px; */
+color: #fff;
+text-transform: uppercase;
+animation: fadeIn 2s;
+-webkit-animation: fadeIn 2s;
+-moz-animation: fadeIn 2s;
+-o-animation: fadeIn 2s;
+-ms-animation: fadeIn 2s;
 }
 
 h2 {
@@ -271,6 +313,8 @@ button#restart {
 
 .tray h2 {
 margin-bottom: 40px;
+color: #fff;
+font-size: 1.5em;
 }
 
 .youtube {
