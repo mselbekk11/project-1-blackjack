@@ -13,44 +13,41 @@ let wins = 0
 let losses = 0
 let draws = 0
 
-// // Add an event listener to the enter button
-// document.getElementById('enter-button').addEventListener('click', function () {
-//   // Get the value from the name input field
-//   var playerNameInput = document.getElementById('name-input').value
+// document.getElementById('enter-button').addEventListener('click', enter)
+// const playerName = document.getElementById('name-input').value
 
-//   // Get the player name element
-//   var playerNameElement = document.getElementById('player-name')
+// console.log(playerName)
 
-//   // Set the player name element's text content to the input value
-//   playerNameElement.textContent = playerNameInput
+// function enter(e) {
+//   const splash = document.getElementById('splash')
+//   splash.classList.add('display-none')
+//   console.log(splash)
+// }
+
+// document.addEventListener('DOMContentLoaded', function () {
+//   // Get references to the input field and the enter button
+//   const nameInput = document.getElementById('name-input')
+//   const enterButton = document.getElementById('enter-button')
+//   // Define a variable to store the name
+//   let storedName
+
+//   // Add an event listener to the enter button
+//   enterButton.addEventListener('click', function () {
+//     // Get the value entered in the input field
+//     const enteredName = nameInput.value
+
+//     // Check if a name has been entered
+//     if (enteredName) {
+//       const splash = document.getElementById('splash')
+//       splash.classList.add('display-none')
+//       const playerName = document.getElementById('player-name')
+//       // playerName.innerText = enteredName + ' ' + dealerSum
+//       playerName.innerText = enteredName
+//     } else {
+//       alert('Please enter a name before clicking Enter.')
+//     }
+//   })
 // })
-
-document.addEventListener('DOMContentLoaded', function () {
-  // Get references to the input field and the enter button
-  const nameInput = document.getElementById('name-input')
-  const enterButton = document.getElementById('enter-button')
-  // Define a variable to store the name
-  let storedName
-
-  // Add an event listener to the enter button
-  enterButton.addEventListener('click', function () {
-    // Get the value entered in the input field
-    const enteredName = nameInput.value
-
-    console.log(enteredName)
-
-    // Check if a name has been entered
-    if (enteredName) {
-      console.log(enteredName)
-      const splash = document.getElementById('splash')
-      splash.classList.add('display-none')
-      const playerName = document.getElementById('player-name')
-      playerName.innerHTML = `${enteredName} <span id="your-sum" >${yourSum}</span>`
-    } else {
-      alert('Please enter a name before clicking Enter.')
-    }
-  })
-})
 
 // Add an event listener to the restart button
 document.getElementById('restart').addEventListener('click', restartGame)
@@ -67,6 +64,8 @@ function restartGame() {
   // Clear the totals in the card count
   document.getElementById('dealer-cards').innerHTML = ''
   document.getElementById('your-cards').innerHTML = ''
+  document.getElementById('your-sum').innerHTML = ''
+  document.getElementById('dealer-sum').innerHTML = ''
 
   // Clear the hidden card and result messages
   // document.getElementById('hidden').src = ''
@@ -79,9 +78,6 @@ function restartGame() {
   shuffleDeck()
   startGame()
 
-  document.getElementById('dealer-sum').innerHTML = ''
-  document.getElementById('your-sum').innerHTML = yourSum
-
   // Reset the score display
 
   wins = parseInt(localStorage.getItem('wins')) || 0
@@ -91,8 +87,6 @@ function restartGame() {
   document.getElementById('wins').innerText = wins
   document.getElementById('losses').innerText = losses
   document.getElementById('draws').innerText = draws
-
-  console.log('Restarting the game') // Add this line
 }
 
 window.onload = function () {
@@ -135,7 +129,6 @@ function buildDeck() {
     }
   }
   // console.log(deck)
-  console.log(deck) // Add this to check the deck contents
 }
 
 function shuffleDeck() {
@@ -193,11 +186,10 @@ function hit() {
   yourSum += getValue(card)
   yourAceCount += checkAce(card)
   document.getElementById('your-cards').append(cardImg)
-  document.getElementById('your-sum').innerText = yourSum
+
   if (reduceAce(yourSum, yourAceCount) > 21) {
     canHit = false
   }
-  console.log(yourSum)
 }
 
 function stay() {
@@ -236,6 +228,12 @@ function stay() {
   document.getElementById('dealer-sum').innerText = dealerSum
   document.getElementById('your-sum').innerText = yourSum
   document.getElementById('results').innerText = message
+  //   document.getElementById('buttons').innerHTML = ''
+  //   document.getElementById(
+  //     'buttons'
+  //   ).innerHTML = `<button id="deal" type="button" onClick="window.location.reload()">
+  //   Deal
+  // </button>`
 
   // Save the values in local storage
   localStorage.setItem('wins', wins)
