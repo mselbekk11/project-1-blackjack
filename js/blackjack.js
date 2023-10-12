@@ -13,6 +13,8 @@ let wins = 0
 let losses = 0
 let draws = 0
 
+const error = document.getElementById('error')
+
 // // Add an event listener to the enter button
 // document.getElementById('enter-button').addEventListener('click', function () {
 //   // Get the value from the name input field
@@ -47,7 +49,8 @@ document.addEventListener('DOMContentLoaded', function () {
       const playerName = document.getElementById('player-name')
       playerName.innerHTML = `${enteredName} <span id="your-sum" >${yourSum}</span>`
     } else {
-      alert('Please enter a name before clicking Enter.')
+      // alert('Please enter a name before clicking Enter.')
+      return error.classList.remove('display-none')
     }
   })
 })
