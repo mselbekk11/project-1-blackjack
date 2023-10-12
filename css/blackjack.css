@@ -291,6 +291,10 @@ button#restart {
   margin: 30px 30px;
   font-size: 1.3em;
 }
+
+#wins, #losses, #draws {
+  color: #d4af37; 
+}
 .tray {
   height: 100%;
   width: 0;
