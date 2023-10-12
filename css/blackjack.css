@@ -82,6 +82,13 @@ animation: fadeIn 2s;
 -ms-animation: fadeIn 2s;
 }
 
+#enter-button:hover {
+  -webkit-box-shadow: 0px 5px 10px 1px rgba(0,0,0,0.55);
+  -moz-box-shadow: 0px 5px 10px 1px rgba(0,0,0,0.55);
+  box-shadow: 0px 5px 10px 1px rgba(0,0,0,0.55);
+  transition: 0.3s;
+}
+
 #error {
   position: absolute;
   bottom: 40px;
