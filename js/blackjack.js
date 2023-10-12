@@ -122,7 +122,6 @@ function startGame() {
     cardImg.src = './cards/svg/' + card + '.svg'
     dealerSum += getValue(card)
     dealerAceCount += checkAce(card)
-    console.log(card)
     document.getElementById('dealer-cards').append(cardImg)
   }
   for (let i = 0; i < 2; i++) {
