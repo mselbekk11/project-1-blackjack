@@ -54,7 +54,7 @@ padding: 15px;
 border: none;
 border-radius: 5px;
 outline: none;
-background-color: #BDD2B9;
+background-color: #fff;
 animation: fadeIn 2s;
 -webkit-animation: fadeIn 2s;
 -moz-animation: fadeIn 2s;
@@ -63,7 +63,7 @@ animation: fadeIn 2s;
 }
 
 input::placeholder{
-  color: rgb(72, 72, 72);
+  color: rgb(181, 181, 181);
 }
 
 #enter-button {
@@ -104,6 +104,9 @@ animation: fadeIn 2s;
 -o-animation: fadeIn 2s;
 -ms-animation: fadeIn 2s;
 }
+
+
+
 
 h2 {
   color: #aad0a7;
