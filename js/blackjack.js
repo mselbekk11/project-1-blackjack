@@ -17,9 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const enterButton = document.getElementById('enter-button')
   enterButton.addEventListener('click', function () {
     const enteredName = nameInput.value
-    console.log(enteredName)
     if (enteredName) {
-      console.log(enteredName)
       const splash = document.getElementById('splash')
       splash.classList.add('display-none')
       const playerName = document.getElementById('player-name')
@@ -59,8 +57,6 @@ function restartGame() {
   document.getElementById('wins').innerText = wins
   document.getElementById('losses').innerText = losses
   document.getElementById('draws').innerText = draws
-
-  console.log('Restarting the game') // Add this line
 }
 
 window.onload = function () {
