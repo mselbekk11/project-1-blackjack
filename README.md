@@ -2,6 +2,7 @@
 
 I have designed and built a first player game where you will need to beat the dealer in a game of blackjack. The game will provide the ability to deal (receive cards) hit (get a new card) & stand (stick with your cards). The amount of wins, loses & draws are recorded.
 
+
 ## Gameplay 
 
 ![Blackjack Start Screen](https://res.cloudinary.com/dtjasyr7k/image/upload/v1697145238/Screenshot_2023-10-12_at_14.13.25_suowbu.png)
